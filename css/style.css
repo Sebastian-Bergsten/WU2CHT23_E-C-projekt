@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Inter:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+#huvudmeny-wrapper {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas:
+    "header nav nav"
+    "img img article1"
+    "img img article2"
+    ;
+}
+
+#huvud-header {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    grid-area: header;
+    background: red;
+}
+
+#huvud-nav {
+    grid-area: nav;
+    background: green;
+}
+
+#article1 {
+    grid-area: article1;
+    background: purple;
+}
+
+#article2 {
+    grid-area: article2;
+    background: orange;
+}
+
+#background {
+    grid-area: img;
+    background-image: url(/img/yogaGirlMountainPose.jpg);
+    background-size: cover;
+    position: center center;
+}
+
+#galleri-wrapper {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas:
+    "header nav nav"
+    "section section section"
+    "footer footer footer"
+}
+
+#galleri-header {
+    grid-area: header;
+    background: red;
+}
+
+#galleri-nav {
+    grid-area: nav;
+    background: green;
+}
+
+.hälsogrupper {
+    grid-area: section;
+    background: blue;
+}
+
+#galleri-footer {
+    grid-area: footer;
+    background: purple;
+}
+
+#om_oss-wrapper {
+    display: 
+    grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 4fr;
+    grid-template-rows: 100px 1fr 1fr 1fr ;
+    grid-template-areas:
+    "header header nav"
+    "bild1 bild2 stuff"
+    "bild1 bild3 stuff"
+    "list list footer"
+}
+
+#om_oss-header {
+    grid-area: header;
+    background: red;
+}
+
+#om_oss-nav {
+    grid-area: nav;
+    background: green;
+}
+
+#bild1 {
+    grid-area: bild1;
+    background: lightblue;
+}
+
+#bild2 {
+    grid-area: bild2;
+    background: cyan;
+}
+
+#bild3 {
+    grid-area: bild3;
+    background: darkblue;
+}
+
+#om_oss {
+    grid-area: stuff;
+    background: pink;
+}
+
+#kontakt_lista {
+    grid-area: list;
+    background: lightgreen;
+}
+
+#om_oss-footer {
+    grid-area: footer;
+    background: purple;
+}
