@@ -7,30 +7,49 @@
     padding: 0px;
 }
 
-
-
 #huvudmeny-wrapper {
     display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 1fr 100px;
+    height: 1050px;
+    grid-gap: 10px;
+    padding: 10px;
+    grid-template-columns: 300px 1fr 1fr;
+    grid-template-rows: 100px 400px 400px 100px;
     grid-template-areas:
     "header nav nav"
-    "img img article1"
-    "img img article2"
+    "mt mt mt"
+    "emt emt article1"
+    "emt emt article2"
     ;
 }
 
+#body_huvudmeny {
+    background-image: url(../img/yogaGirlMountainPose.jpg);
+    background-size: cover;
+}
+
+.huvud-articles {
+    border-radius: 30px;
+}
+
 #huvud-header {
-    font-family: 'Inter', sans-serif;
-    font-weight: bold;
+    background-image: url(../img/HealthHub_logo3.0.jpg);
+    background-size: contain ;
     grid-area: header;
-    background: red;
 }
 
 #huvud-nav {
     grid-area: nav;
     background: green;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-button {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1.5px black solid;
 }
 
 #article1 {
@@ -41,13 +60,6 @@
 #article2 {
     grid-area: article2;
     background: orange;
-}
-
-#background {
-    grid-area: img;
-    background-image: url(/img/yogaGirlMountainPose.jpg);
-    background-size: cover;
-    position: center center;
 }
 
 #galleri-wrapper {
@@ -82,8 +94,7 @@
 }
 
 #om_oss-wrapper {
-    display: 
-    grid;
+    display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 4fr;
     grid-template-rows: 100px 1fr 1fr 1fr ;
