@@ -7,7 +7,12 @@
     padding: 0px;
 }
 
-#huvudmeny-wrapper {
+#body-huvudmeny {
+    background-image: url(../img/yogaGirlMountainPose.jpg);
+    background-size: cover;
+}
+
+#wrapper-huvudmeny {
     display: grid;
     height: 1050px;
     grid-gap: 10px;
@@ -22,34 +27,56 @@
     ;
 }
 
-#body_huvudmeny {
-    background-image: url(../img/yogaGirlMountainPose.jpg);
-    background-size: cover;
+.articles-huvudmeny {
+    border-radius: 30px;    
 }
 
-.huvud-articles {
-    border-radius: 30px;
-}
-
-#huvud-header {
+#header-huvudmeny {
+    grid-area: header;
     background-image: url(../img/HealthHub_logo3.0.jpg);
     background-size: contain ;
-    grid-area: header;
 }
 
-#huvud-nav {
+#nav-huvudmeny {
     grid-area: nav;
-    background: green;
+    background: #9b59b6;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.nav-button {
-    background-color: white;
+.nav-buttons {
+    background-color: #fefbe8;
     padding: 15px;
     border-radius: 10px;
     border: 1.5px black solid;
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+a:hover {
+    color: white;
+}
+
+.nav-buttons:hover {
+    background-color: #9b59b6;
+    text-decoration-color: white;
+    border: 1.5px white solid;
+}
+
+#sökfält {
+    background-color: #fefbe8;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1.5px black solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    width: 300px;
 }
 
 #article1 {
