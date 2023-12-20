@@ -1,10 +1,31 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Inter:wght@300&display=swap');
 
+/* Gör loggan till en hemknapp */
+
 * {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+    grid-area: header;
+    background-image: url(../img/HealthHub_logo3.0.jpg);
+    background-size: contain;
+    border-radius: 30px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+nav {
+    grid-area: nav;
+    background: #9b59b6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);     
 }
 
 #body-huvudmeny {
@@ -12,64 +33,39 @@
     background-size: cover;
 }
 
-#wrapper-huvudmeny {
+#wrapper-huvudmeny {    
     display: grid;
     height: 1050px;
+    padding: 10px 0px 0px 10px;
     grid-gap: 10px;
-    padding: 10px;
-    grid-template-columns: 300px 1fr 1fr;
-    grid-template-rows: 100px 400px 400px 100px;
+     grid-template-columns: 300px 1fr 2fr;
+    grid-template-rows: 100px 300px;
     grid-template-areas:
     "header nav nav"
-    "mt mt mt"
-    "emt emt article1"
-    "emt emt article2"
+    "emt emt article"
     ;
 }
 
-.articles-huvudmeny {
-    border-radius: 30px;    
-}
-
-#header-huvudmeny {
-    grid-area: header;
-    background-image: url(../img/HealthHub_logo3.0.jpg);
-    background-size: contain ;
-}
-
-#nav-huvudmeny {
-    grid-area: nav;
-    background: #9b59b6;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
 .nav-buttons {
-    background-color: #fefbe8;
-    padding: 15px;
+    color: black;
+    text-decoration: none;
+    background-color: #E6D6ED;
+    padding: 10px 15px 10px 15px;  
     border-radius: 10px;
     border: 1.5px black solid;
-}
-
-a {
-    text-decoration: none;
-    color: black
-}
-
-a:hover {
-    color: white;
+    transition: 0.3s;
 }
 
 .nav-buttons:hover {
-    background-color: #9b59b6;
-    text-decoration-color: white;
-    border: 1.5px white solid;
+    background-color: #4E2D5B;
+    color: #E6D6ED;
+    border-color: #E6D6ED;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 #sökfält {
-    background-color: #fefbe8;
-    padding: 15px;
+    background-color: #E6D6ED;
+    padding: 10px;
     border-radius: 10px;
     border: 1.5px black solid;
     display: flex;
@@ -79,95 +75,234 @@ a:hover {
     width: 300px;
 }
 
-#article1 {
-    grid-area: article1;
-    background: purple;
+#article {
+    grid-area: article;
+    border-radius: 20px 0px 0px 20px;
+    position: relative;
+    top: 500px;
+    background-color: #9b59b6;
+    display: flex;
 }
 
-#article2 {
-    grid-area: article2;
-    background: orange;
+#article_img {
+    height: 300px;
+    width: auto;
+    border-radius: 20px;
+    border: #9b59b6 5px solid;
 }
 
-#galleri-wrapper {
+#article_text {
+    color: #F3EBF6;
+    line-height: 200%;
+    margin: 20px 0px 0px 20px;
+}
+
+#body_galleri {
+    background-image: url(../img/brickBackground.jpg);
+    background-size: cover;
+}
+
+#wrapper-galleri {
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 100px 1fr 100px;
+    grid-gap: 10px;
+    padding: 10px 10px 0px 10px;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 100px 1fr 140px;
     grid-template-areas:
-    "header nav nav"
-    "section section section"
-    "footer footer footer"
+    "header nav"
+    "panel panel"
+    "footer footer"
 }
 
-#galleri-header {
-    grid-area: header;
-    background: red;
+
+#hälsogrupper {
+    grid-area: panel;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}   
+
+.panel {
+    padding: 5px;
+    background: #E6D6ED;
+    border-radius: 10px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-#galleri-nav {
-    grid-area: nav;
-    background: green;
+.panel_pictures {
+    height: auto;
+    width: 280px;
+    border-radius: 10px;
 }
 
-.hälsogrupper {
-    grid-area: section;
-    background: blue;
+.panel_text {
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
 }
 
-#galleri-footer {
+.drop-down {
+    display:none;
+}
+
+.panel_pictures:hover + .drop-down {
+    width: 280px;
+    display: block;
+    filter: none;
+}
+
+#footer_galleri {
     grid-area: footer;
-    background: purple;
+    border-radius: 100px 100px 0px 0px;
+    background: #4E2D5B;
+    display: flex;
+    justify-content: center;
 }
 
-#om_oss-wrapper {
+#center_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#text_footer {
+    font-size: 30px;
+    width: 1050px;
+    text-align: center;
+    color: #F3EBF6;
+    padding-top: 10px;
+    padding-bottom: 7px;
+}
+
+button {
+    background-color: #F3EBF6;
+    color: #754389;
+    padding: 10px;
+    height: auto;
+    width: auto;
+    border-radius: 100vh;
+    border-color: #9b59b6;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 85%;
+}
+
+#body_om_oss {
+    background-image: url(../img/brickBackground.jpg);
+}
+
+#wrapper-om_oss {
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 1fr 4fr;
-    grid-template-rows: 100px 1fr 1fr 1fr ;
+    grid-template-columns: 150px 150px 1fr;
+    grid-template-rows: 100px 1fr 1fr 1fr;
     grid-template-areas:
     "header header nav"
     "bild1 bild2 stuff"
-    "bild1 bild3 stuff"
-    "list list footer"
+    "bild3 bild3 stuff"
+    "footer footer footer"
 }
 
-#om_oss-header {
-    grid-area: header;
-    background: red;
+#header_om_oss {
+    margin: 5px;
+    width: 270px;
 }
 
-#om_oss-nav {
-    grid-area: nav;
-    background: green;
+#nav_om_oss {
+    margin: 5px;
 }
 
 #bild1 {
     grid-area: bild1;
-    background: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#personal_man {
+    border: #9b59b6 2px solid;
+    width: auto;
+    height: 140px;
 }
 
 #bild2 {
     grid-area: bild2;
-    background: cyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#personal_kvinna {
+    border: #9b59b6 2px solid;
+    width: auto;
+    height: 140px;
 }
 
 #bild3 {
     grid-area: bild3;
-    background: darkblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#om_oss {
+#group_picture {
+    border: #9b59b6 2px solid;
+    width: auto;
+    height: 180px;
+}
+
+#article_om_oss {
     grid-area: stuff;
-    background: pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#kontakt_lista {
-    grid-area: list;
-    background: lightgreen;
+#text_om_oss {
+    font-size: larger;
+    width: 600px;
+    line-height: 150%;
+    background-color: #9b59b6;
+    color: #F3EBF6;
+    padding: 20px;
+    border: 5px;
+    border-radius: 20px;
+    border-style: outset;
 }
 
-#om_oss-footer {
+#footer_om_oss {
     grid-area: footer;
-    background: purple;
+    background-color: #4E2D5B;
+    display: flex;
+    justify-content: space-around;
+    border-top: #E6D6ED 5px double;
+}
+
+.list_title {
+    color: #F3EBF6;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.list_item {
+    text-decoration: underline;
+    padding-bottom: 10px;
+    color: #F3EBF6;
+}
+
+.socials {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.app {
+    width: 10px;
+    height: auto;
+    filter: grayscale(100%);
 }
